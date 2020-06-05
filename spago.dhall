@@ -3,7 +3,7 @@ Welcome to a Spago project!
 You can edit this file as you like.
 -}
 { name =
-    "formless-aj"
+    "formless-independent"
 , dependencies =
     [ "aff"
     , "datetime"
@@ -14,7 +14,7 @@ You can edit this file as you like.
     , "variant"
     ]
 , packages =
-    ../packages.dhall
+    ./packages.dhall
 , sources =
-    [ "src/**/*.purs", "test/**/*.purs" ]
+    [ "lib/src/**/*.purs", "lib/test/**/*.purs" ]
 }
