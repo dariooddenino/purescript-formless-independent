@@ -1,4 +1,4 @@
-module Formless.Internal.Transform where
+module FormlessI.Internal.Transform where
 
 import Prelude
 
@@ -8,9 +8,9 @@ import Data.Symbol (class IsSymbol, SProxy(..))
 import Data.Tuple (Tuple(..), fst, snd)
 import Data.Variant (Variant)
 import Data.Variant.Internal (VariantRep(..))
-import Formless.Types.Form (FormField(..), FormFieldRow, InputField(..), InputFunction, OutputField(..), U)
-import Formless.Data.FormFieldResult (FormFieldResult(..), fromEither, toMaybe)
-import Formless.Validation (Validation, runValidation)
+import FormlessI.Types.Form (FormField(..), FormFieldRow, InputField(..), InputFunction, OutputField(..), U)
+import FormlessI.Data.FormFieldResult (FormFieldResult(..), fromEither, toMaybe)
+import FormlessI.Validation (Validation, runValidation)
 import Prim.Row as Row
 import Prim.RowList as RL
 import Record as Record

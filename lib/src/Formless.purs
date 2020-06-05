@@ -6,26 +6,26 @@
 -- | ```purescript
 -- | import Formless as F
 -- | ```
-module Formless
-  ( module Formless.Class.Initial
-  , module Formless.Component
-  , module Formless.Data.FormFieldResult
-  , module Formless.Retrieve
-  , module Formless.Transform.Record
-  , module Formless.Transform.Row
-  , module Formless.Types.Query
-  , module Formless.Types.Form
-  , module Formless.Validation
-  , module Formless.Query
+module FormlessI
+  ( module FormlessI.Class.Initial
+  , module FormlessI.Component
+  , module FormlessI.Data.FormFieldResult
+  , module FormlessI.Retrieve
+  , module FormlessI.Transform.Record
+  , module FormlessI.Transform.Row
+  , module FormlessI.Types.Query
+  , module FormlessI.Types.Form
+  , module FormlessI.Validation
+  , module FormlessI.Query
   ) where
 
-import Formless.Class.Initial (class Initial, initial)
-import Formless.Component (eval)
-import Formless.Data.FormFieldResult (FormFieldResult(..), _Error, _Success, fromEither, toMaybe)
-import Formless.Retrieve (FormFieldGet, FormFieldLens, GetAll, GetError(..), GetInputField(..), GetOutput(..), GetResultField(..), GetTouchedField(..), _Field, _FieldError, _FieldInput, _FieldOutput, _FieldResult, _FieldTouched, getError, getErrorAll, getField, getInput, getInputAll, getOutput, getOutputAll, getResult, getResultAll, getTouched, getTouchedAll)
-import Formless.Transform.Record (UnwrapField(..), WrapField(..), unwrapOutputFields, unwrapRecord, wrapInputFields, wrapInputFunctions, wrapRecord)
-import Formless.Transform.Row (class MakeInputFieldsFromRow, class MakeSProxies, SProxies, makeSProxiesBuilder, mkInputFields, mkInputFieldsFromRowBuilder, mkSProxies)
-import Formless.Types.Query (InternalState(..), PublicState, Query(..), State, StateRow, ValidStatus(..), initFormState)
-import Formless.Types.Form (ErrorType, FormField(..), FormFieldRow, FormProxy(..), InputField(..), InputFunction(..), InputType, OutputField(..), OutputType, U(..))
-import Formless.Validation (EmptyValidators(..), Validation(..), hoistFn, hoistFnE, hoistFnE_, hoistFnME, hoistFnME_, hoistFn_, noValidation, runValidation)
-import Formless.Query (andThen, asyncModifyValidate, asyncSetValidate, loadForm, loadForm_, modify, modifyAll, modifyValidate, modifyValidateAll, reset, resetAll, set, setAll, setValidate, setValidateAll, submit, validate, validateAll)
+import FormlessI.Class.Initial (class Initial, initial)
+import FormlessI.Component (eval)
+import FormlessI.Data.FormFieldResult (FormFieldResult(..), _Error, _Success, fromEither, toMaybe)
+import FormlessI.Retrieve (FormFieldGet, FormFieldLens, GetAll, GetError(..), GetInputField(..), GetOutput(..), GetResultField(..), GetTouchedField(..), _Field, _FieldError, _FieldInput, _FieldOutput, _FieldResult, _FieldTouched, getError, getErrorAll, getField, getInput, getInputAll, getOutput, getOutputAll, getResult, getResultAll, getTouched, getTouchedAll)
+import FormlessI.Transform.Record (UnwrapField(..), WrapField(..), unwrapOutputFields, unwrapRecord, wrapInputFields, wrapInputFunctions, wrapRecord)
+import FormlessI.Transform.Row (class MakeInputFieldsFromRow, class MakeSProxies, SProxies, makeSProxiesBuilder, mkInputFields, mkInputFieldsFromRowBuilder, mkSProxies)
+import FormlessI.Types.Query (InternalState(..), PublicState, Query(..), State, StateRow, ValidStatus(..), initFormState)
+import FormlessI.Types.Form (ErrorType, FormField(..), FormFieldRow, FormProxy(..), InputField(..), InputFunction(..), InputType, OutputField(..), OutputType, U(..))
+import FormlessI.Validation (EmptyValidators(..), Validation(..), hoistFn, hoistFnE, hoistFnE_, hoistFnME, hoistFnME_, hoistFn_, noValidation, runValidation)
+import FormlessI.Query (andThen, asyncModifyValidate, asyncSetValidate, loadForm, loadForm_, modify, modifyAll, modifyValidate, modifyValidateAll, reset, resetAll, set, setAll, setValidate, setValidateAll, submit, validate, validateAll)

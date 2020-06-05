@@ -1,9 +1,9 @@
--- | This module exports helpers for working with Formless queries.
+-- | This module exports helpers for working with FormlessI queries.
 -- | Since many queries are used as actions and may involve injecting
 -- | variants, these helpers are provided to remove any associated
 -- | boilerplate. Prefer these over using data constructors from the
--- | Formless query algebra.
-module Formless.Query where
+-- | FormlessI query algebra.
+module FormlessI.Query where
 
 import Prelude
 
@@ -12,10 +12,10 @@ import Data.Newtype (class Newtype, wrap)
 import Data.Symbol (class IsSymbol, SProxy)
 import Data.Time.Duration (Milliseconds)
 import Data.Variant (Variant, inj)
-import Formless.Class.Initial (class Initial, initial)
-import Formless.Transform.Record (WrapField, wrapInputFields, wrapInputFunctions)
-import Formless.Types.Query (Query(..))
-import Formless.Types.Form (InputField, InputFunction, U(..))
+import FormlessI.Class.Initial (class Initial, initial)
+import FormlessI.Transform.Record (WrapField, wrapInputFields, wrapInputFunctions)
+import FormlessI.Types.Query (Query(..))
+import FormlessI.Types.Form (InputField, InputFunction, U(..))
 import Heterogeneous.Mapping as HM
 import Prim.Row as Row
 
@@ -41,7 +41,7 @@ loadForm_
   -> Query form
 loadForm_ = LoadForm
 
--- | Perform two Formless actions in sequence. Can be chained arbitrarily.
+-- | Perform two FormlessI actions in sequence. Can be chained arbitrarily.
 -- | Useful when a field needs to modify itself on change and also trigger
 -- | validation on one or more other fields, or when a modification on one
 -- | field should also modify another field.
@@ -141,7 +141,7 @@ reset
   -> Query form
 reset sym = Reset (wrap (inj sym (wrap (const initial))))
 
--- | A helper to create the correct `Validate` query for Formless, given
+-- | A helper to create the correct `Validate` query for FormlessI, given
 -- | a label
 validate
   :: ∀ form us sym t0 e i o

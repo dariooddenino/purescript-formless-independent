@@ -1,4 +1,4 @@
-module Formless.Class.Initial where
+module FormlessI.Class.Initial where
 
 import Prelude
 

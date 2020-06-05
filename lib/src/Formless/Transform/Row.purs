@@ -1,12 +1,12 @@
-module Formless.Transform.Row where
+module FormlessI.Transform.Row where
 
 import Prelude
 
 import Data.Newtype (class Newtype, wrap)
 import Data.Symbol (class IsSymbol, SProxy(..))
-import Formless.Class.Initial (class Initial, initial)
-import Formless.Types.Form (FormProxy, InputField(..))
-import Formless.Internal.Transform (class Row1Cons, FromScratch, fromScratch)
+import FormlessI.Class.Initial (class Initial, initial)
+import FormlessI.Types.Form (FormProxy, InputField(..))
+import FormlessI.Internal.Transform (class Row1Cons, FromScratch, fromScratch)
 import Prim.Row as Row
 import Prim.RowList as RL
 import Record.Builder as Builder

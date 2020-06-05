@@ -1,4 +1,4 @@
-module Formless.Types.Query where
+module FormlessI.Types.Query where
 
 import Prelude
 
@@ -8,12 +8,12 @@ import Data.Maybe (Maybe)
 import Data.Newtype (class Newtype)
 import Data.Variant (Variant)
 import Effect.Aff (Milliseconds)
-import Formless.Internal.Transform (class InputFieldsToFormFields, inputFieldsToFormFields)
-import Formless.Types.Form (FormField, InputField, InputFunction, U)
-import Formless.Validation (Validation)
+import FormlessI.Internal.Transform (class InputFieldsToFormFields, inputFieldsToFormFields)
+import FormlessI.Types.Form (FormField, InputField, InputFunction, U)
+import FormlessI.Validation (Validation)
 import Prim.RowList as RL
 
--- | The component query type. See Formless.Query for helpers related
+-- | The component query type. See FormlessI.Query for helpers related
 -- | to constructing and using these queries.
 data Query form
   = Modify (form Variant InputFunction)

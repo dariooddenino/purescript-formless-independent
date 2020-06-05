@@ -1,11 +1,11 @@
-module Formless.Validation where
+module FormlessI.Validation where
 
 import Prelude
 
 import Control.Alt (class Alt, (<|>))
 import Data.Either (Either(..), either)
 import Data.Newtype (class Newtype, unwrap, wrap)
-import Formless.Types.Form (FormField, InputField)
+import FormlessI.Types.Form (FormField, InputField)
 import Heterogeneous.Mapping (class MapRecordWithIndex, class Mapping, ConstMapping, hmap)
 import Prim.RowList (class RowToList)
 

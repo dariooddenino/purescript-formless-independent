@@ -1,4 +1,4 @@
-module Formless.Component where
+module FormlessI.Component where
 
 import Prelude
 
@@ -7,11 +7,11 @@ import Data.Eq (class EqRecord)
 import Data.Maybe (Maybe(..))
 import Data.Newtype (class Newtype, over, unwrap)
 import Data.Variant (Variant)
-import Formless.Data.FormFieldResult (FormFieldResult)
-import Formless.Internal.Transform as Internal
-import Formless.Types.Form (FormField, InputField, InputFunction, OutputField, U)
-import Formless.Types.Query (InternalState(..), Query(..), State, ValidStatus(..))
-import Formless.Validation (Validation)
+import FormlessI.Data.FormFieldResult (FormFieldResult)
+import FormlessI.Internal.Transform as Internal
+import FormlessI.Types.Form (FormField, InputField, InputFunction, OutputField, U)
+import FormlessI.Types.Query (InternalState(..), Query(..), State, ValidStatus(..))
+import FormlessI.Validation (Validation)
 import Prim.RowList as RL
 import Unsafe.Coerce (unsafeCoerce)
 

@@ -1,9 +1,9 @@
-module Formless.Types.Form where
+module FormlessI.Types.Form where
 
 import Prelude
 
 import Data.Newtype (class Newtype)
-import Formless.Data.FormFieldResult (FormFieldResult)
+import FormlessI.Data.FormFieldResult (FormFieldResult)
 
 -- | Create a proxy for your form type, for use with functions that generate records from
 -- | form proxies.
