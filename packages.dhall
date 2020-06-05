@@ -114,7 +114,7 @@ let upstream =
       https://raw.githubusercontent.com/purescript/package-sets/psc-0.13.0-20190626/src/packages.dhall sha256:9905f07c9c3bd62fb3205e2108515811a89d55cff24f4341652f61ddacfcf148
 
 let overrides =
-  { formless-independent-lib = ./lib/spago.dhall as Location
+  { formless-independent = ./lib/spago.dhall as Location
   }
 
 let additions = {=}
