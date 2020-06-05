@@ -16,5 +16,5 @@ You can edit this file as you like.
 , packages =
     ./packages.dhall
 , sources =
-    [ "lib/src/**/*.purs", "lib/test/**/*.purs" ]
+    [ "src/**/*.purs", "test/**/*.purs" ]
 }
